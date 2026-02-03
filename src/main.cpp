@@ -7,6 +7,12 @@ void saisie_nom(string tab[],int n){
         cin>>tab[i];
     }
 }
+void saisie_notes(float tab[],int n){
+    for(int i=0;i<n;i++){
+        cout<<"entrez la note de l'eleve"<<i+1<<endl;
+        cin>>tab[i];
+    }
+}
 int main (){
 cout<<"Bienvenue, veuillez entrer le nombre d'eleve"<<endl;
 int n;
@@ -22,7 +28,7 @@ do{
             saisie_nom(nom,TAILLE);
             break;
         case 2:
-            cout<<"saisie des notes"<<endl;
+            saisie_notes(notes,TAILLE);
             break;
         case 3:
             cout<<"calcul et affichage de la moyenne"<<endl;

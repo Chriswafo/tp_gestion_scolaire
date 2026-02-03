@@ -1,19 +1,25 @@
 #include <iostream>
 #include <string>
 using namespace std;
+void saisie_nom(string tab[],int n){
+    for(int i=0;i<n;i++){
+        cout<<"entrez le nom de l'eleve"<<i+1<<endl;
+        cin>>tab[i];
+    }
+}
 int main (){
 cout<<"Bienvenue, veuillez entrer le nombre d'eleve"<<endl;
 int n;
 cin>>n;
 const int TAILLE=n;
-string noms[TAILLE];float notes[TAILLE];
+string nom[TAILLE];float notes[TAILLE];
 cout<<"tapez: "<<endl<<"1.pour saisir les noms des eleves"<<endl<<"2. pour saisir la notes des eleves"<<endl<<"3.pour calculer et afficher la moyenne des eleves"<<endl<<"4. pour quitter"<<endl;
 int choix ;
 cin>> choix;
 do{
     switch(choix){
         case 1:
-            cout<<"saisie des noms"<<endl;
+            saisie_nom(nom,TAILLE);
             break;
         case 2:
             cout<<"saisie des notes"<<endl;

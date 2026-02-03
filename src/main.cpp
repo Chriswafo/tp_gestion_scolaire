@@ -13,6 +13,13 @@ void saisie_notes(float tab[],int n){
         cin>>tab[i];
     }
 }
+float moyenne(float tab[],int n){
+    float moy,somme(0);
+    for(int i=0;i<n;i++){
+            somme=somme+tab[i];
+    }
+    return moy=somme/n;
+}
 int main (){
 cout<<"Bienvenue, veuillez entrer le nombre d'eleve"<<endl;
 int n;
@@ -31,7 +38,7 @@ do{
             saisie_notes(notes,TAILLE);
             break;
         case 3:
-            cout<<"calcul et affichage de la moyenne"<<endl;
+            cout<<"la moyenne generale de la classe est:"<<moyenne(notes,TAILLE)<<endl;
             break;
         case 4:
             cout<<"aurevoir"<<endl;
